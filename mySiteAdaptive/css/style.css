@@ -1,0 +1,159 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html { 
+	height: 100%;
+}
+
+* {box-sizing: border-box;}
+
+body {
+  font-size: 1em;
+  font-family: 'Arima Madurai', cursive;
+  font-weight: 400;
+  line-height: 1.2; 
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main {
+  width: 100%;
+  background: #9aa1a7 url("../imgs/background.jpg") center no-repeat;
+  background-size: cover;
+  min-height: 1080px;
+}
+
+.container {
+  width: 92.708333333%;
+  margin: 0 auto;
+}
+
+/***main-nav***/
+
+nav ul li {
+  display: inline-block;
+  margin-right: 50px;
+  text-align: center;
+}
+
+nav ul li:last-of-type {
+  margin-right: 0px;
+}
+
+nav ul {
+  border-bottom: 1px solid white;
+  text-align: center;
+} 
+
+nav ul li a {
+  font-size: 1.5em;
+  padding: 35.5px 0 35.5px 0;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: orange;
+}
+
+/***logo***/
+
+div.logo {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  max-width: 474px;
+  margin: 0 auto;
+}
+
+div.logo img {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+div.logo span {
+  font-size: 2.25em; /*36px*/
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: -45px;
+  margin-left: 85%;
+}
+
+h1 {
+  font-size: 3.75em; /*60px*/
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+div.scroll {
+  font-size: 1.125em; /*18px*/
+  text-transform: uppercase;
+  padding-top: 130px;
+  padding-bottom: 105px;
+  text-align: center;
+}
+
+div.scroll a {
+	background: url("../imgs/doubleArrow.png") no-repeat 50% 100%;
+	padding-bottom: 40px;
+}
+
+/***about***/
+
+div.about {
+  width: 100%;
+  background: white;
+  min-height: 1080px;
+}
+
+div.about div.container a {
+	color: #bebebe;
+}
+
+div.about div.container nav ul {
+  border-bottom: 1px solid #bebebe;
+} 
+
+div.about div.container nav ul a:hover {
+	color: orange;
+}

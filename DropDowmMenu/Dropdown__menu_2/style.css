@@ -1,0 +1,96 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {font-size: 1.25em;}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+ul {list-style-type: none;}
+
+.inner {
+	opacity: 0; 
+   	visibility: hidden;
+    -webkit-transition: all .3s ease .15s;
+    -ms-transition: all .3s ease .15s;
+    -o-transition: all .3s ease .15s;
+    -moz-transition: all .3s ease .15s;
+    transition: all .3s ease .15s;
+}
+
+.nav {
+	margin: 50px auto;
+	width: 150px;
+}
+
+.inner a {
+	padding: 8.5px 80px 8.5px 20px;
+}
+
+.list { 
+	color: white;
+ 	display: block;
+ 	width: 140px;
+	padding: 8.5px 0px 8.5px 20px;
+	margin-left: -5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 2px 6px 0px #000000;
+	-moz-box-shadow: 0px 2px 6px 0px #000000;
+	box-shadow: 0px 2px 6px 0px #000000;
+	position: relative;
+	background: url("images/drop.png") no-repeat #df4f34 90% 50%;
+	z-index: 10;
+}
+
+li:hover .list{
+	background: url("images/dropd.png") no-repeat #df4f34 90% 50%;
+}
+
+.inner li {
+	background: #e19586;
+	-webkit-box-shadow: 0px 1px 5px -1px #141214;
+	-moz-box-shadow: 0px 1px 5px -1px #141214;
+	box-shadow: 0px 1px 5px -1px #141214;
+}
+
+.nav li .inner li:hover {
+	background: #d07f6f;
+	/*border-top: 1px solid black;
+	border-bottom: 1px solid white;*/
+}
+
+.inner {
+	-webkit-box-shadow: 0px 0px 5px 0px #000000;
+	-moz-box-shadow: 0px 0px 5px 0px #000000;
+	box-shadow: 0px 0px 5px 0px #000000;
+}
+
+.nav li:hover .inner {
+	opacity: 1; 
+	visibility: visible;
+}
+
+.inner {position: absolute;}
+
+	

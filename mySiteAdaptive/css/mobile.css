@@ -1,0 +1,16 @@
+nav ul li {
+  display: block;
+  margin: 0;
+}
+
+nav ul li a {
+  padding: 15.5px 0 15.5px 0;
+}
+
+div.logo {
+  padding-top: 75px;
+}
+
+h1 {
+  font-size: 25px;
+}

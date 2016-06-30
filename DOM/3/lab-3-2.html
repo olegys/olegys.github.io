@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Таблица умножения</title>
+<style type="text/css">
+td{padding:10px;border:1px solid #369;}
+</style>
+<script type="text/javascript">
+var cell = 500;
+var row = 500;
+
+function createDOM() {
+	var d = document.getElementById('d');
+	d.innerHTML = "";
+	var start = new Date();
+	var t = d.appendChild(document.createElement("table"));
+	var tb = t.appendChild(document.createElement("tbody"));
+	for (var i = 1; i <= row; i++) {
+		var tr = tb.appendChild(document.createElement("tr"));
+		for (var j = 1; j <= cell; j++) {
+			var td = tr.appendChild(document.createElement("td"));
+			td.appendChild(document.createTextNode(i*j));
+		}
+	}
+	/* Создайте в элементе div таблицу с помощью методов DOM */
+	var end = new Date();
+	console.log((end - start) + "ms");	
+}
+
+
+//такой метод быстрее
+function createHTML() {
+	var d = document.getElementById('d');
+	d.innerHTML = "";
+	var start = new Date();
+	var txt = "<table><tbody>";
+	for (var i = 1; i <= row; i++) {
+		txt += "<tr>";
+		for (var j = 1; j <= cell; j++) {
+			txt += "<td>" + (i*j) + "</td>";
+		}
+		txt += "</tr>";
+	}
+	/* Создайте в элементе div таблицу с помощью методов DOM */
+	txt += "</tbody></table>";
+	d.innerHTML = txt;
+	var end = new Date();
+	console.log((end - start) + "ms");	
+}
+</script>
+</head>
+<body>
+<a href="javascript:createHTML();">Создать таблицу с помощью методов DOM</a><br>
+<div id="d"></div>
+</body>
+</html>
