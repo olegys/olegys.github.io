@@ -29,7 +29,7 @@ html {
 	height: 100%;
 }
 
-* {box-sizing: border-box;}
+* {box-sizing: border-box;} /*transition: all 1s ease-out 0.5s;*/
 
 body {
   font-size: 1em;
@@ -43,6 +43,7 @@ a {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
+  outline: none;
 }
 
 ul {
@@ -59,7 +60,6 @@ ul {
   width: 100%;
   background: #9aa1a7 url("../imgs/background.jpg") center no-repeat;
   background-size: cover;
-  min-height: 1080px;
 }
 
 .container {
@@ -103,7 +103,7 @@ div.logo {
   margin: 0 auto;
 }
 
-div.logo img {
+img {
   text-align: center;
   width: 100%;
   height: auto;
@@ -128,13 +128,13 @@ h1 {
 div.scroll {
   font-size: 1.125em; /*18px*/
   text-transform: uppercase;
-  padding-top: 130px;
-  padding-bottom: 105px;
+  padding: 130px 0 105px 0;
   text-align: center;
+  clear: both;
 }
 
 div.scroll a {
-	background: url("../imgs/doubleArrow.png") no-repeat 50% 100%;
+	background: url("../imgs/doubleArrow.png") no-repeat center bottom;
 	padding-bottom: 40px;
 }
 
@@ -143,7 +143,7 @@ div.scroll a {
 div.about {
   width: 100%;
   background: white;
-  min-height: 1080px;
+  color: black;
 }
 
 div.about div.container a {
@@ -157,3 +157,56 @@ div.about div.container nav ul {
 div.about div.container nav ul a:hover {
 	color: orange;
 }
+
+.content img {
+	float: left;
+	padding: 75px 50px 0 95px;
+	max-width: 51.404494382%; /*770px*/
+	min-width: 300px;
+	height: auto;
+} 
+
+div.content h1 {
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 3.75em;
+}
+
+div.content p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+	text-align: justify;
+}
+
+div.content span {
+	font-family: 'Pacifico', cursive;
+	font-size: 2.25em;
+	text-transform: capitalize;
+}
+
+.info {
+	padding: 100px 0 0 0;
+	line-height: 1.8;
+}
+
+.info h1, .info p, .info span {
+	text-align: left;
+}
+
+.info h1 {
+	padding-bottom: 50px;
+}
+
+.info p:first-of-type {
+	padding-bottom: 35px;
+}
+
+.info p:nth-child(3) {
+	padding-bottom: 10px;
+}
+
+div.content div.scroll {
+	padding-top: 80px;
+}
+
+/***portfolio***/

@@ -14,3 +14,30 @@ div.logo {
 h1 {
   font-size: 25px;
 }
+
+/***about***/
+
+.content img {
+	padding: 20px 0 0 0;
+	float: none;
+	display: block;
+	margin: 0 auto;
+} 
+
+div.content h1 {
+	font-size: 2.75em;
+	padding-bottom: 10px;
+}
+
+div.content p, .info h1, .info p, .info span {
+	text-align: center;
+}
+
+div.info {
+	padding-top: 40px;
+}
+
+div.content div.scroll a {
+	background: url("../imgs/doubleArrow.png") no-repeat 40% 100%;
+	padding-bottom: 65px;
+}
