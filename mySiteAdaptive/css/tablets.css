@@ -29,6 +29,7 @@ div.content h1 {
 
 .info p{
 	float: left;
+	width: 100%;
 }
 
 .info p span {
