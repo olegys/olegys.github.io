@@ -19,10 +19,18 @@ h1 {
 
 .content img {
 	padding: 30px;
+	
 } 
 
 div.content h1 {
 	font-size: 2.75em;
-	padding-bottom: 10px;
+	padding-bottom: 10px;	
 }
 
+.info p{
+	float: left;
+}
+
+.info p span {
+	clear: both;
+}
