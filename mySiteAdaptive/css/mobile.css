@@ -37,7 +37,12 @@ div.info {
 	padding-top: 40px;
 }
 
-div.content div.scroll a {
+div.content div.scroll a, div.portfolio div.scroll a {
 	background: url("../imgs/doubleArrow.png") no-repeat 40% 100%;
+	padding-bottom: 65px;
+}
+
+div.portfolio div.scroll a {
+	background: url("../imgs/doubleArrow.png") no-repeat 30% 100%;
 	padding-bottom: 65px;
 }

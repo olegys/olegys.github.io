@@ -37,6 +37,7 @@ body {
   font-weight: 400;
   line-height: 1.2; 
   color: white;
+  background: #9aa1a7;
 }
 
 a {
@@ -210,3 +211,53 @@ div.content div.scroll {
 }
 
 /***portfolio***/
+
+.portfolio {
+  width: 100%;
+  background: #9aa1a7 url("../imgs/portfolio.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.portfolio h1 {
+	text-transform: uppercase;
+	font-weight: 400;
+	padding: 85px 0 85px 0;
+}
+
+ul.my-works {
+	text-align: center;
+	/*padding: 0 95px 0 95px;*/
+}
+
+ul.my-works img {
+	max-width: 279px;
+	min-width: 150px;
+	height: auto;
+}
+
+ul.my-works li{
+	padding: 0 25px 50px 25px;
+	text-align: center;
+	display: inline-block;
+}
+
+/***contacts***/
+
+div.contacts {
+	background: white;
+	width: 100%;
+	color: black;
+	min-height: 1080px;
+}
+
+div.contacts div.container a {
+	color: #bebebe;
+}
+
+div.contacts div.container nav ul {
+  border-bottom: 1px solid #bebebe;
+} 
+
+div.contacts div.container nav ul a:hover {
+	color: orange;
+}

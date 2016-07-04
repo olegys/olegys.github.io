@@ -29,7 +29,7 @@ div.content h1 {
 
 .info p{
 	float: left;
-	width: 100%;
+	width: 100%; /*для нормального отображения mobile landscape*/
 }
 
 .info p span {
