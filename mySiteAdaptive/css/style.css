@@ -162,10 +162,20 @@ div.about div.container nav ul a:hover {
 .content img {
 	float: left;
 	padding: 75px 50px 0 95px;
-	max-width: 51.404494382%; /*770px*/
+	width: 51.404494382%; 
 	min-width: 300px;
+	max-width: 770px; 
 	height: auto;
 } 
+
+/*.content img {
+	float: left;
+	padding: 75px 50px 0 95px;
+	max-width: 51.404494382%;
+	min-width: 300px; 
+	height: auto;
+}
+*/
 
 div.content h1 {
 	font-weight: 400;
@@ -247,7 +257,6 @@ div.contacts {
 	background: white;
 	width: 100%;
 	color: black;
-	min-height: 1080px;
 }
 
 div.contacts div.container a {
@@ -260,4 +269,82 @@ div.contacts div.container nav ul {
 
 div.contacts div.container nav ul a:hover {
 	color: orange;
+}
+
+.my-contacts {
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 180px;
+}
+
+.my-contacts img {
+	width: 57px;
+	height: 57px;
+}
+
+.my-contacts p {
+	font-size: 3.75em;
+	font-weight: 400;
+}
+
+.my-contacts span {
+	font-size: 0.5em;
+	font-weight: 700;
+}
+
+.my-contacts p.telephone {
+	font-size: 3em;
+}
+
+.contacts .container .my-contacts p a,
+div.contacts div.container div.footer a {
+	color: black;
+}
+
+div.contacts div.container div.footer a {
+	text-transform: none;
+}
+
+.contacts .container .my-contacts p a:hover {
+	color: orange; /*#bebebe*/
+}
+
+div.contacts div.container div.footer a:hover {
+	color: orange; /*#bebebe*/
+	text-decoration: underline;
+}
+
+div.footer {
+	border-top: 1px solid #bebebe;
+	padding: 40px 0 40px 0;
+	text-align: center;
+}
+
+div.contacts div.container div.my-contacts p.social {
+font-size: 0;
+}
+
+div.contacts div.container div.my-contacts p.social a {
+	margin-right: 25px;
+}
+
+div.contacts div.container div.my-contacts p.social a:last-of-type {
+	margin-right: 0;
+}
+
+.footer {
+	margin-top: 200px;
+	font-size: 1.125em;
+}
+
+div.my-contacts p:nth-child(odd) {
+padding-bottom: 20px;
+}
+
+div.my-contacts p:nth-child(even) {
+padding-bottom: 40px;
+}
+
+div.my-contacts p.social {
+	padding-bottom: 0;
 }

@@ -46,3 +46,17 @@ div.portfolio div.scroll a {
 	background: url("../imgs/doubleArrow.png") no-repeat 35% 100%;
 	padding-bottom: 65px;
 }
+
+/***contacts***/
+
+.contacts .my-contacts p.mail, .contacts .my-contacts p.telephone {
+	font-size: 1.75em;
+}
+
+.my-contacts {
+	padding-top: 70px;
+}
+
+.footer {
+	margin-top: 100px;
+}

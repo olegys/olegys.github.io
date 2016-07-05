@@ -35,3 +35,17 @@ div.content h1 {
 .info p span {
 	clear: both;
 }
+
+/***contacts***/
+
+.contacts .my-contacts p.mail, .contacts .my-contacts p.telephone {
+	font-size: 2.75em;
+}
+
+.my-contacts {
+	padding-top: 160px;
+}
+
+.footer {
+	margin-top: 180px;
+}
