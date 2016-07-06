@@ -29,7 +29,10 @@ html {
 	height: 100%;
 }
 
-* {box-sizing: border-box;} /*transition: all 1s ease-out 0.5s;*/
+* {
+	box-sizing: border-box;
+	transition: all 0.5s ease-out;
+} 
 
 body {
   font-size: 1em;
@@ -110,14 +113,14 @@ img {
   height: auto;
 }
 
-div.logo span {
-  font-size: 2.25em; /*36px*/
+/*div.logo span {
+  font-size: 2.25em; 
   font-weight: 700;
   text-transform: uppercase;
   display: block;
   margin-bottom: -45px;
   margin-left: 85%;
-}
+}*/
 
 h1 {
   font-size: 3.75em; /*60px*/
@@ -224,7 +227,7 @@ div.content div.scroll {
 
 .portfolio {
   width: 100%;
-  background: #9aa1a7 url("../imgs/portfolio.jpg") center no-repeat;
+  background: #9aa1a7 url("../imgs/porto.jpg") center no-repeat;
   background-size: cover;
 }
 
