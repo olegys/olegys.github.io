@@ -23,3 +23,20 @@ $(document).ready(function(){
 		return false;
 	});
 });
+
+$(document).ready(function(){
+	$('button').on("click",function (){
+		$('.main-nav').addClass("toggle").slideToggle(800);
+	});});
+
+$(window).on('load resize',windowSize);
+
+function windowSize(){
+	if ($(window).width() > '768') {
+		$('.main-nav').css("display","block");
+			} else {
+				$('.main-nav').css("display","");
+			}}
+	
+
+	
