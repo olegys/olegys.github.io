@@ -48,3 +48,20 @@ div.content h1 {
 .footer {
 	margin-top: 170px;
 }
+
+/***burger menu***/
+
+nav {
+	display: none;
+}
+
+button {
+	display: block;
+}
+
+.toggle {
+	border-radius: 0px 0px 15px 15px;
+	position: fixed;
+	width: 92.708333333%;
+	background: rgba(211,211,211,0.95);
+}
