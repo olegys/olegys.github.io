@@ -283,6 +283,19 @@ div.contacts div.container nav ul a:hover {
 .my-contacts img {
 	width: 57px;
 	height: 57px;
+	border-radius: 50%;
+}
+
+img.face:hover {
+	background: #4c39dc;
+}
+
+ img.vk:hover {
+	background: #2688f5;
+}
+
+ img.inst:hover {
+	background: #c332cc;
 }
 
 .my-contacts p {
