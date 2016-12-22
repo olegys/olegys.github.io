@@ -22,7 +22,7 @@ template: `
 	},
     methods: {
     	onSubmit() {
-	      	this.$http.post('/scripts/feedback.php', this.obj)
+	      	this.$http.post('../../scripts/feedback.php', this.obj)
 	        .then(res => {
 	        alert(res.body);
 	        }, (err) => {
