@@ -1,0 +1,85 @@
+@import "/node_modules/normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+// @font-face {
+//     font-family: Oduda; /* Имя шрифта */
+//     src: url(/fonts/Oduda-Bold-Demo.otf); /* Путь к файлу со шрифтом */
+//     src: url('/fonts/oduda-bold-demo-webfont.eot');
+//     src: url('/fonts/oduda-bold-demo-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('/fonts/oduda-bold-demo-webfont.woff2') format('woff2'),
+//          url('/fonts/oduda-bold-demo-webfont.woff') format('woff'),
+//          url('/fonts/oduda-bold-demo-webfont.ttf') format('truetype'),
+//          url('/fonts/oduda-bold-demo-webfont.svg#Oduda') format('svg');
+// }
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+h1 {
+	color: #f1c40f;
+}
+
+.contacts {
+	height: 100vh;
+	background: #2ecc71;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	&__name, &__email, &__comment, &__submit {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1;
+
+		width: 100%;
+		padding: 10px;
+		margin: 0 0 20px 0;
+		border-radius: 10px;
+		border: 2px solid transparent;
+		outline: none;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+	} 
+
+	&__form {
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	flex-direction: column;
+    	width: 320px;
+    	height: auto;
+	}
+
+	&__comment {
+		resize: none;
+	}
+
+	&__name:focus, &__email:focus, &__comment:focus {
+		border: 2px solid rgba(241, 196, 15, 0.7);
+	}
+
+	&__submit {
+		margin: 0;
+		color: #fff;
+		cursor: pointer;
+		background: #e67e22;
+		transition: all .2s ease-out;
+	}
+
+	&__submit:hover {
+		background: #d35400;
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
+	}
+}
+// @import "_landing";
+// @import "_media";
+
+
