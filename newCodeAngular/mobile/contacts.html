@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OnTheGoContacts</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+<div class="nav-menu">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+		<g class="_nav">
+			<path class="firstLine" d="M21,8H4C3.2,8,2.6,7.3,2.6,6.6S3.2,5.2,4,5.2h17c0.8,0,1.4,0.6,1.4,1.4S21.8,8,21,8z"/>
+			<path class="secondLine" d="M21,13.9H4c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4h17c0.8,0,1.4,0.6,1.4,1.4S21.8,13.9,21,13.9z"/>
+			<path class="thirdLine" d="M21,19.5H4c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4h17c0.8,0,1.4,0.6,1.4,1.4S21.8,19.5,21,19.5z"/>
+		</g>
+	</svg>
+</div>
+
+<div class="overlay hidden">
+    <nav class="overlay__menu-item active-fields">
+        <p><a href="./index.html">Регистрация</a></p>
+        <p><a href="./contacts.html">Контакты</a></p>
+        <p><a href="./about.html">О нас</a></p>
+    </nav>
+    <div class="social active-fields">
+        <a href="https://www.facebook.com/ectvonthego" class="social__icon"><img src="./SVG/icon_fb.svg" alt="icon_fb"></a>
+        <a href="https://plus.google.com/u/2/117323052830748671852" class="social__icon"><img src="./SVG/icon_g.svg" alt="icon_google"></a>
+        <!--<a href="#" class="social__icon"><img src="./SVG/icon_twitter.svg" alt="twitter"></a>-->
+        <a href="https://vk.com/ectvonthego" class="social__icon"><img src="./SVG/icon_vk.svg" alt="icon_vk"></a>
+    </div>
+</div>
+
+<div class="lang">
+    <div class="select-language active-fields">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" enable-background="new 0 0 720 720">
+            <path fill="#FFFFFF" d="M360,0C206.5,0,75.8,96.6,24.6,231.2h670.7C644.2,96.6,513.5,0,360,0z"></path>
+            <path fill="#DE6262" d="M360,720c153.5,0,284.2-96.6,335.4-231.2H24.6C75.8,623.4,206.5,720,360,720z"></path>
+            <path fill="#5798D4"
+                  d="M695.4,231.2H24.6C9.5,270.9,0,314.5,0,360s9.5,89.1,24.6,128.8h670.7C710.5,449.1,720,405.5,720,360S710.5,270.9,695.4,231.2z"></path>
+        </svg>
+    </div>
+    <div class="language-list active-fields hidden">
+        <a href="/en/mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" enable-background="new 0 0 720 720">
+                <circle fill="#6672B0" cx="360" cy="360" r="358.3"></circle>
+                <path fill="#FFFFFF"
+                      d="M642.1,586.9l-95-93.1h148.2c17.1-41.8,24.7-85.5,24.7-133s-9.5-91.2-24.7-133H552.8l91.2-91.2c-15.2-19-34.2-38-53.2-55.1l-96.9,98.8V24.3C452,9.1,408.3-0.4,360.8-0.4s-91.2,9.5-133,24.7v148.2l-93.1-93.1c-20.9,17.1-38,34.2-55.1,55.1l95,93.1H24.5c-15.2,41.8-24.7,85.5-24.7,133s9.5,91.2,24.7,133h153.9l-96.9,96.9c17.1,19,34.2,38,55.1,53.2l91.2-91.2v142.5c41.8,17.1,85.5,24.7,133,24.7s91.2-9.5,133-24.7V546.9l93.1,93.1C607.9,624.9,625,607.8,642.1,586.9z"></path>
+                <path fill="#DE6162"
+                      d="M4.6,426h288.3v288.3c20.9,3.8,43.6,5.7,66.4,5.7c22.8,0,45.5-1.9,66.4-5.7V426h288.3c3.8-20.9,5.7-43.6,5.7-66.4s-1.9-45.5-5.7-66.4H425.6V4.9c-20.9-3.8-43.6-5.7-66.4-5.7c-22.8,0-45.5,1.9-66.4,5.7v288.3H4.6c-3.8,20.9-5.7,43.6-5.7,66.4S0.8,405.1,4.6,426z"></path>
+            </svg>
+        </a>
+    </div>
+</div>
+
+<div class="swipe__page-info contacts-info">
+    <p>Мобильная версия находится в разработке</p>
+    <p>Зайдите с компьютера или ноутбука</p>
+</div>
+
+<div id="swipe">
+    <div class="swipe__page swipe__page_center contacts">
+        <h1 class="contacts__title">Contacts</h1>
+        <address class="contacts__container">
+            <p class="contacts__container-support">
+                <img src="./SVG/ic_email.svg" alt="mail_image">
+                <a href="mailto:support@on-the-go.eu">support@on-the-go.eu</a>
+            </p>
+            <p>
+                <span class="width-title">6 St David's Square, Westferry Road, London, E14 3WA, United Kingdom &copy; 2017 English Club TV Ltd</span>
+            </p>
+        </address>
+
+        <div class="img-container">
+            <div class="img-container__gradient contacts__gradient"></div>
+            <img class="contacts__image" src="./SVG/ic_contacts_pic.svg" alt="image">
+        </div>
+
+    </div>
+</div>
+
+<script src="./scripts.js"></script>
+</body>
+</html>
