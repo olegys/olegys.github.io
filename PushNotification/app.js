@@ -1,5 +1,5 @@
 firebase.initializeApp({
-    messagingSenderId: '599989926222'
+    messagingSenderId: '448358493027'
 });
 
 
@@ -50,31 +50,31 @@ if (window.location.protocol === 'https:' &&
     }
 
     // get permission on subscribe only once
-    bt_register.on('click', function () {
+    bt_register.on('click', function() {
         getToken();
     });
 
-    bt_delete.on('click', function () {
+    bt_delete.on('click', function() {
         // Delete Instance ID token.
         messaging.getToken()
-            .then(function (currentToken) {
+            .then(function(currentToken) {
                 messaging.deleteToken(currentToken)
-                    .then(function () {
+                    .then(function() {
                         console.log('Token deleted.');
                         setTokenSentToServer(false);
                         // Once token is deleted update UI.
                         resetUI();
                     })
-                    .catch(function (error) {
+                    .catch(function(error) {
                         showError('Unable to delete token.', error);
                     });
             })
-            .catch(function (error) {
+            .catch(function(error) {
                 showError('Error retrieving Instance ID token.', error);
             });
     });
 
-    form.on('submit', function (event) {
+    form.on('submit', function(event) {
         event.preventDefault();
 
         var notification = {};
@@ -87,23 +87,23 @@ if (window.location.protocol === 'https:' &&
     });
 
     // handle catch the notification on current page
-    messaging.onMessage(function (payload) {
+    messaging.onMessage(function(payload) {
         console.log('Message received. ', payload);
         info.show();
         info_message
             .text('')
-            .append('<strong>' + payload.notification.title + '</strong>')
-            .append('<em> ' + payload.notification.body + '</em>')
-            ;
+            .append('<strong>'+payload.notification.title+'</strong>')
+            .append('<em> '+payload.notification.body+'</em>')
+        ;
 
         // register fake ServiceWorker for show notification on mobile devices
-        navigator.serviceWorker.register('/PushNotification/messaging-sw.js');
-        Notification.requestPermission(function (permission) {
+        navigator.serviceWorker.register('/serviceworker/messaging-sw.js');
+        Notification.requestPermission(function(permission) {
             if (permission === 'granted') {
-                navigator.serviceWorker.ready.then(function (registration) {
+                navigator.serviceWorker.ready.then(function(registration) {
                     payload.notification.data = payload.notification;
                     registration.showNotification(payload.notification.title, payload.notification);
-                }).catch(function (error) {
+                }).catch(function(error) {
                     // registration failed :(
                     showError('ServiceWorker registration failed.', error);
                 });
@@ -112,15 +112,15 @@ if (window.location.protocol === 'https:' &&
     });
 
     // Callback fired if Instance ID token is updated.
-    messaging.onTokenRefresh(function () {
+    messaging.onTokenRefresh(function() {
         messaging.getToken()
-            .then(function (refreshedToken) {
+            .then(function(refreshedToken) {
                 console.log('Token refreshed.');
                 // Send Instance ID token to app server.
                 sendTokenToServer(refreshedToken);
                 updateUIForPushEnabled(refreshedToken);
             })
-            .catch(function (error) {
+            .catch(function(error) {
                 showError('Unable to retrieve refreshed token.', error);
             });
     });
@@ -151,13 +151,14 @@ if (window.location.protocol === 'https:' &&
     updateUIForPushPermissionRequired();
 }
 
+
 function getToken() {
     messaging.requestPermission()
-        .then(function () {
+        .then(function() {
             // Get Instance ID token. Initially this makes a network call, once retrieved
             // subsequent calls to getToken will return from cache.
             messaging.getToken()
-                .then(function (currentToken) {
+                .then(function(currentToken) {
 
                     if (currentToken) {
                         sendTokenToServer(currentToken);
@@ -168,20 +169,20 @@ function getToken() {
                         setTokenSentToServer(false);
                     }
                 })
-                .catch(function (error) {
+                .catch(function(error) {
                     showError('An error occurred while retrieving token.', error);
                     updateUIForPushPermissionRequired();
                     setTokenSentToServer(false);
                 });
         })
-        .catch(function (error) {
+        .catch(function(error) {
             showError('Unable to get permission to notify.', error);
         });
 }
 
 
 function sendNotification(notification) {
-    var key = 'AAAAi7IvuU4:APA91bFQztPisb-XxnKI-Cyh3pD5aFbBHwQVZCRSS5sw3cFlgzs1DcTUxhjAsEV9ubJPJNptqE707U3zRVFMusT0EJcaDVe7c6qqmS8ZrOxN6uMEEwESoJPUSJikJz-78Gbx0OMTUzaa';
+    var key = 'AAAAaGQ_q2M:APA91bGCEOduj8HM6gP24w2LEnesqM2zkL_qx2PJUSBjjeGSdJhCrDoJf_WbT7wpQZrynHlESAoZ1VHX9Nro6W_tqpJ3Aw-A292SVe_4Ho7tJQCQxSezDCoJsnqXjoaouMYIwr34vZTs';
 
     console.log('Send notification', notification);
 
@@ -190,7 +191,7 @@ function sendNotification(notification) {
     massage_row.hide();
 
     messaging.getToken()
-        .then(function (currentToken) {
+        .then(function(currentToken) {
             fetch('https://fcm.googleapis.com/fcm/send', {
                 'method': 'POST',
                 'headers': {
@@ -201,9 +202,9 @@ function sendNotification(notification) {
                     'notification': notification,
                     'to': currentToken
                 })
-            }).then(function (response) {
+            }).then(function(response) {
                 return response.json();
-            }).then(function (json) {
+            }).then(function(json) {
                 console.log('Response', json);
 
                 if (json.success == 1) {
@@ -213,11 +214,11 @@ function sendNotification(notification) {
                     massage_row.hide();
                     massage_id.text(json.results[0].error);
                 }
-            }).catch(function (error) {
+            }).catch(function(error) {
                 showError(error);
             });
         })
-        .catch(function (error) {
+        .catch(function(error) {
             showError('Error retrieving Instance ID token.', error);
         });
 }
