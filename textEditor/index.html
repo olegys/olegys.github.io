@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1 class="editorTitle">Text Editor</h1>
+	<div class="textEditor">
+		<div class="buttonBox">
+			<button type="button" class="btn btn-info" onclick="toUpper()">toUpper</button>
+			<button type="button" class="btn btn-info" onclick="toLower()">toLower</button>
+			<button type="button" class="btn btn-info" onclick="wordsToUpper()">wordsToUpper</button>
+			<button type="button" class="btn btn-info" onclick="firstLetterToUpper()">firstLetterToUpper</button>
+			<button type="button" class="btn btn-info" onclick="addPlusToWords()">addPlusToWords</button>
+			<button type="button" class="btn btn-info" onclick="deletePlusToWords()">deletePlusToWords</button>
+			<button type="button" class="btn btn-info" onclick="addQuotes()">addQuotes</button>
+			<button type="button" class="btn btn-info" onclick="addBrackets()">addBrackets</button>
+			<button type="button" class="btn btn-info" onclick="addDash()">addDash</button>
+			<button type="button" class="btn btn-info" onclick="addDashAndBrackets()">addDashAndBrackets</button>
+			<button type="button" class="btn btn-info" onclick="addDashAndQuotes()">addDashAndQuotes</button>
+			<button type="button" class="btn btn-info" onclick="deleteExcessSpaces()">deleteExcessSpaces</button>
+			<button type="button" class="btn btn-info" onclick="deleteTab()">deleteTab</button>
+			<button type="button" class="btn btn-info" onclick="deleteRight()">deleteRight</button>
+			<button type="button" class="btn btn-info" onclick="replaceSpaces()">replaceSpaces</button>
+			<button type="button" class="btn btn-info" onclick="deleteSpecialSymbols()">deleteSpecialSymbols</button>
+			<button type="button" class="btn btn-info" onclick="replaceSpecialSymbols()">replaceSpecialSymbols</button>
+			<button type="button" class="btn btn-info" onclick="sortStringStraight()">sortStringStraight</button>
+			<button type="button" class="btn btn-info" onclick="sortStringReverse()">sortStringReverse</button>
+			<button type="button" class="btn btn-info" onclick="deleteDuplicates()">deleteDuplicates</button>
+			<button type="button" class="btn btn-secondary" onclick="clearField()">clearField</button>
+			<button type="button" class="btn btn-danger" onclick="undo()">undo</button>
+			<button type="button" class="btn btn-success" onclick="next()">next</button>
+			<button type="button" class="btn btn-dark" onclick="copyToClipboard()">copyToClipboard</button>
+		</div>
+		<div class="areaContainer">
+			<textarea id="field" name="field">сОк цЕНа</textarea>
+			<div class="replacerBox">
+				<input type="text" id="search" placeholder="Search">
+				<input type="text" id="replace" placeholder="Replace">
+				<button type="button" class="btn btn-primary" onclick="searchAdnReplace('#search', '#replace')">Search and Replace</button>
+			</div>
+		</div>
+	</div>
+<script src="main.js"></script>
+</body>
+</html>
