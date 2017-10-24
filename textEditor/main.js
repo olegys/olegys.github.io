@@ -1,7 +1,19 @@
+'use strict';
+
 let input = document.querySelector('#field');
 let actions = [];
 let iteration = [];
 // actions.push(input.value);
+
+addAllListenerClick();
+
+function addAllListenerClick() {
+	let buttons = document.querySelectorAll('button');
+	for (let btn of buttons) {
+		let id = btn.getAttribute('id');
+		document.querySelector('#' + id).addEventListener('click', eval(id));
+	}
+}
 
 function toUpper() {
 	save();
@@ -174,10 +186,10 @@ function replaceSpecialSymbols() {
 	save();
 }
 
-function searchAdnReplace(serchId, replaceId) {
+function searchAndReplace() {
 	save();
-	let search = document.querySelector(serchId);
-	let replace = document.querySelector(replaceId);
+	let search = document.querySelector('#search');
+	let replace = document.querySelector('#replace');
 	input.value = input.value.replace(search.value, replace.value);
 	save();
 }

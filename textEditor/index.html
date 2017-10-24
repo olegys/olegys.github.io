@@ -10,37 +10,37 @@
 	<h1 class="editorTitle">Text Editor</h1>
 	<div class="textEditor">
 		<div class="buttonBox">
-			<button type="button" class="btn btn-info" onclick="toUpper()">toUpper</button>
-			<button type="button" class="btn btn-info" onclick="toLower()">toLower</button>
-			<button type="button" class="btn btn-info" onclick="wordsToUpper()">wordsToUpper</button>
-			<button type="button" class="btn btn-info" onclick="firstLetterToUpper()">firstLetterToUpper</button>
-			<button type="button" class="btn btn-info" onclick="addPlusToWords()">addPlusToWords</button>
-			<button type="button" class="btn btn-info" onclick="deletePlusToWords()">deletePlusToWords</button>
-			<button type="button" class="btn btn-info" onclick="addQuotes()">addQuotes</button>
-			<button type="button" class="btn btn-info" onclick="addBrackets()">addBrackets</button>
-			<button type="button" class="btn btn-info" onclick="addDash()">addDash</button>
-			<button type="button" class="btn btn-info" onclick="addDashAndBrackets()">addDashAndBrackets</button>
-			<button type="button" class="btn btn-info" onclick="addDashAndQuotes()">addDashAndQuotes</button>
-			<button type="button" class="btn btn-info" onclick="deleteExcessSpaces()">deleteExcessSpaces</button>
-			<button type="button" class="btn btn-info" onclick="deleteTab()">deleteTab</button>
-			<button type="button" class="btn btn-info" onclick="deleteRight()">deleteRight</button>
-			<button type="button" class="btn btn-info" onclick="replaceSpaces()">replaceSpaces</button>
-			<button type="button" class="btn btn-info" onclick="deleteSpecialSymbols()">deleteSpecialSymbols</button>
-			<button type="button" class="btn btn-info" onclick="replaceSpecialSymbols()">replaceSpecialSymbols</button>
-			<button type="button" class="btn btn-info" onclick="sortStringStraight()">sortStringStraight</button>
-			<button type="button" class="btn btn-info" onclick="sortStringReverse()">sortStringReverse</button>
-			<button type="button" class="btn btn-info" onclick="deleteDuplicates()">deleteDuplicates</button>
-			<button type="button" class="btn btn-secondary" onclick="clearField()">clearField</button>
-			<button type="button" class="btn btn-danger" onclick="undo()">undo</button>
-			<button type="button" class="btn btn-success" onclick="next()">next</button>
-			<button type="button" class="btn btn-dark" onclick="copyToClipboard()">copyToClipboard</button>
+			<button type="button" class="btn btn-info" id="toUpper">toUpper</button>
+			<button type="button" class="btn btn-info" id="toLower">toLower</button>
+			<button type="button" class="btn btn-info" id="wordsToUpper">wordsToUpper</button>
+			<button type="button" class="btn btn-info" id="firstLetterToUpper">firstLetterToUpper</button>
+			<button type="button" class="btn btn-info" id="addPlusToWords">addPlusToWords</button>
+			<button type="button" class="btn btn-info" id="deletePlusToWords">deletePlusToWords</button>
+			<button type="button" class="btn btn-info" id="addQuotes">addQuotes</button>
+			<button type="button" class="btn btn-info" id="addBrackets">addBrackets</button>
+			<button type="button" class="btn btn-info" id="addDash">addDash</button>
+			<button type="button" class="btn btn-info" id="addDashAndBrackets">addDashAndBrackets</button>
+			<button type="button" class="btn btn-info" id="addDashAndQuotes">addDashAndQuotes</button>
+			<button type="button" class="btn btn-info" id="deleteExcessSpaces">deleteExcessSpaces</button>
+			<button type="button" class="btn btn-info" id="deleteTab">deleteTab</button>
+			<button type="button" class="btn btn-info" id="deleteRight">deleteRight</button>
+			<button type="button" class="btn btn-info" id="replaceSpaces">replaceSpaces</button>
+			<button type="button" class="btn btn-info" id="deleteSpecialSymbols">deleteSpecialSymbols</button>
+			<button type="button" class="btn btn-info" id="replaceSpecialSymbols">replaceSpecialSymbols</button>
+			<button type="button" class="btn btn-info" id="sortStringStraight">sortStringStraight</button>
+			<button type="button" class="btn btn-info" id="sortStringReverse">sortStringReverse</button>
+			<button type="button" class="btn btn-info" id="deleteDuplicates">deleteDuplicates</button>
+			<button type="button" class="btn btn-secondary" id="clearField">clearField</button>
+			<button type="button" class="btn btn-danger" id="undo">undo</button>
+			<button type="button" class="btn btn-success" id="next">next</button>
+			<button type="button" class="btn btn-dark" id="copyToClipboard">copyToClipboard</button>
 		</div>
 		<div class="areaContainer">
 			<textarea id="field" name="field">сОк цЕНа</textarea>
 			<div class="replacerBox">
 				<input type="text" id="search" placeholder="Search">
 				<input type="text" id="replace" placeholder="Replace">
-				<button type="button" class="btn btn-primary" onclick="searchAdnReplace('#search', '#replace')">Search and Replace</button>
+				<button type="button" class="btn btn-primary" id="searchAndReplace">Search and Replace</button>
 			</div>
 		</div>
 	</div>
