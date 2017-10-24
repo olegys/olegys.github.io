@@ -1,14 +1,16 @@
 let input = document.querySelector('#field');
 let actions = [];
 let iteration = [];
-actions.push(input.value);
+// actions.push(input.value);
 
 function toUpper() {
+	save();
 	input.value = input.value.toUpperCase();
 	save();
 }
 
 function toLower() {
+	save();
 	input.value = input.value.toLowerCase();
 	save();
 }
@@ -24,6 +26,7 @@ function wordsToUpper() {
 	// input.value = outerStr.slice(0, outerStr.length - 1);
 	// save();
 
+	save();
 	let splitLine = input.value.split('\n');
 	let outerStr = '';
 	let splitStr = [];
@@ -47,6 +50,8 @@ function firstLetterToUpper() {
 	// input.value = input.value[0].toUpperCase() + input.value.slice(1);
 	// save();
 
+	save();
+
 	let splitLine = input.value.split('\n');
 	let outerStr = '';
 
@@ -66,6 +71,8 @@ function firstLetterToUpper() {
 }
 
 function addPlusToWords() {
+	save();
+
 	let splitStr = input.value.split(' ');
 	let outerStr = '';
 
@@ -78,6 +85,8 @@ function addPlusToWords() {
 }
 
 function deletePlusToWords() {
+	save();
+
 	let splitStr = input.value.split(' ');
 	let outerStr = '';
 
@@ -90,36 +99,43 @@ function deletePlusToWords() {
 }
 
 function addQuotes() {
+	save();
+
 	let lastInput = input.value[input.value.length - 1];
 	input.value = (input.value[0] ===  '\"' ? '' : '\"') + input.value + (lastInput ===  '\"' ? '' : '\"');
 	save();
 }
 
 function addBrackets() {
+	save();
 	let lastInput = input.value[input.value.length - 1];
 	input.value = (input.value[0] ===  '[' ? '' : '[') + input.value + (lastInput ===  ']' ? '' : ']');
 	save();
 }
 
 function addDash() {
+	save();
 	let lastInput = input.value[input.value.length - 1];
 	input.value = (input.value[0] === '-' ? '' : '-') + input.value;
 	save();
 }
 
 function addDashAndBrackets() {
+	save();
 	let lastInput = input.value[input.value.length - 1];
 	input.value = (input.value[0] ===  '-' && input.value[1] === '[' ? '' : '-[') + input.value + (lastInput ===  ']' ? '' : ']');
 	save();
 }
 
 function addDashAndQuotes() {
+	save();
 	let lastInput = input.value[input.value.length - 1];
 	input.value = (input.value[0] ===  '-' && input.value[1] === '\"' ? '' : '-\"') + input.value + (lastInput ===  '\"' ? '' : '\"');
 	save();
 }
 
 function deleteExcessSpaces() {
+	save();
 	let lastInput = input.value[input.value.length - 1];
 	input.value = input.value.replace(/\s+/g, ' ');
 	(lastInput === ' ' ? lastInput = '' : lastInput = lastInput);
@@ -127,31 +143,39 @@ function deleteExcessSpaces() {
 }
 
 function deleteTab() {
+	save();
 	input.value = input.value.replace(/\t/g, '');
 	save();
 }
 
 function deleteRight() {
+	save();
 	input.value = input.value.replace(/\s-.+/g, '');
 	save();
 }
 
 function replaceSpaces() {
+	save();
 	input.value = input.value.replace(/\s/g, '_');
 	save();
+	console.log(actions, iteration);
 }
 
 function deleteSpecialSymbols() {
+	save();
 	input.value = input.value.replace(/[\(\)\`\~\!\@\#\$\%\^\&\*\_\=\+\[\]\\\{\}\|\;\'\:\"\,\/\<\>\?]/g, '');
 	save();
+	console.log(actions, iteration);
 }
 
 function replaceSpecialSymbols() {
+	save();
 	input.value = input.value.replace(/[\(\)\`\~\!\@\#\$\%\^\&\*\_\=\+\[\]\\\{\}\|\;\'\:\"\,\/\<\>\?]/g, ' ');
 	save();
 }
 
 function searchAdnReplace(serchId, replaceId) {
+	save();
 	let search = document.querySelector(serchId);
 	let replace = document.querySelector(replaceId);
 	input.value = input.value.replace(search.value, replace.value);
@@ -159,6 +183,7 @@ function searchAdnReplace(serchId, replaceId) {
 }
 
 function sortStringStraight() {
+	save();
 	let rows = 	input.value.split(/\n/);
 	let outerStr = '';
 
@@ -176,6 +201,7 @@ function sortStringStraight() {
 }
 
 function sortStringReverse() {
+	save();
 	let rows = 	input.value.split(/\n/);
 	let outerStr = '';
 
@@ -193,6 +219,7 @@ function sortStringReverse() {
 }
 
 function deleteDuplicates() {
+	save();
 	let rows = 	input.value.split(/\n/);
 	let outerStr = '';
   	let elements = {};
@@ -214,6 +241,7 @@ function deleteDuplicates() {
 }
 
 function clearField() {
+	save();
 	input.value = '';
 	save();
 }
@@ -228,8 +256,6 @@ function undo() {
 	if (actions.length > 1) {
 		iteration.push(actions.pop());
 		input.value = actions[actions.length - 1];
-	} else {
-		input.value = actions[0];
 	}
 }
 
