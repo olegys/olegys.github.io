@@ -9,33 +9,43 @@
 </head>
 
 <body>
+    <div id="root"></div>
     <script>
         const game = () => {
+            let random = null;
+            let computerChoose = null;
+            let result = null;
             const stone = 'камень';
             const scissors = 'ножницы';
             const paper = 'бумага';
             const standoff = 'Ничья';
             const win = 'Вы выиграли';
             const lose = 'Вы проиграли';
+            const exit = 'Пока :(';
             const tryAgain = `Ошибка, попробуйте ввести ${stone}, ${scissors} или ${paper}`;
+            const container = document.getElementById('root');
+            let userChoose = prompt(`Введите ${stone}, ${scissors} или ${paper}`, `${stone}`);
 
-            const userChoose = prompt(`Введите ${stone}, ${scissors} или ${paper}`, `${stone}`).toLowerCase();
-
-            if (!(userChoose === stone || userChoose === scissors || userChoose === paper)) {
-                document.body.innerHTML = tryAgain;
+            if (userChoose === null) {
+                container.innerHTML = exit;
                 return;
+            } else if (!(userChoose === stone || userChoose === scissors || userChoose === paper)) {
+                container.innerHTML = tryAgain;
+                return;
+            } else {
+                userChoose = userChoose.toLowerCase();
             }
 
-            const random = Math.random();
-            const computerChoose = random <= 0.5 ? scissors : random > 0.5 && random <= 0.75 ? stone : paper;
+            random = Math.random();
+            computerChoose = random <= 0.5 ? scissors : random > 0.5 && random <= 0.75 ? stone : paper;
 
-            const result = userChoose === computerChoose
+            result = userChoose === computerChoose
                 ? standoff : userChoose === stone && computerChoose === scissors
                     || userChoose === scissors && computerChoose === paper
                     || userChoose === paper && computerChoose === stone
                     ? win : lose;
 
-            document.body.innerHTML = `Вы выбрали: ${userChoose} <br> Компьютер выбрал: ${computerChoose} <br> Результат: ${result}`;
+            container.innerHTML = `Вы выбрали: ${userChoose} <br> Компьютер выбрал: ${computerChoose} <br> Результат: ${result}`;
         }
 
         game();
