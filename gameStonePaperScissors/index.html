@@ -22,7 +22,7 @@
 
         if (!(userChoose === stone || userChoose === scissors || userChoose === paper)) {
             document.body.innerHTML = tryAgain;
-            return false;
+            return;
         }
 
         const random = Math.random();
