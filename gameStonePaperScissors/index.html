@@ -10,31 +10,36 @@
 
 <body>
     <script>
-        const stone = 'камень';
-        const scissors = 'ножницы';
-        const paper = 'бумага';
-        const standoff = 'Ничья';
-        const win = 'Ты выиграл';
-        const lose = 'Ты проиграл';
-        const tryAgain = 'Попробуй еще раз';
+        const game = () => {
+            const stone = 'камень';
+            const scissors = 'ножницы';
+            const paper = 'бумага';
+            const standoff = 'Ничья';
+            const win = 'Ты выиграл';
+            const lose = 'Ты проиграл';
+            const tryAgain = 'Попробуй еще раз';
 
-        const userChoose = prompt(`Введите ${stone}, ${scissors} или ${paper}`, `${stone}`).toLowerCase();
+            const userChoose = prompt(`Введите ${stone}, ${scissors} или ${paper}`, `${stone}`).toLowerCase();
 
-        if (!(userChoose === stone || userChoose === scissors || userChoose === paper)) {
-            document.body.innerHTML = tryAgain;
-            return;
+            if (!(userChoose === stone || userChoose === scissors || userChoose === paper)) {
+                document.body.innerHTML = tryAgain;
+                return;
+            }
+
+            const random = Math.random();
+            const computerChoose = random <= 0.5 ? scissors : random > 0.5 && random <= 0.75 ? stone : paper;
+
+            const result = userChoose === computerChoose
+                ? standoff : userChoose === stone && computerChoose === scissors
+                    || userChoose === scissors && computerChoose === paper
+                    || userChoose === paper && computerChoose === stone
+                    ? win : lose;
+
+            document.body.innerHTML = `Вы выбрали: ${userChoose} <br> Компьютер выбрал: ${computerChoose} <br> Результат: ${result}`;
         }
-
-        const random = Math.random();
-        const computerChoose = random <= 0.5 ? scissors : random > 0.5 && random <= 0.75 ? stone : paper;
-
-        const result = userChoose === computerChoose
-            ? standoff : userChoose === stone && computerChoose === scissors
-                || userChoose === scissors && computerChoose === paper
-                || userChoose === paper && computerChoose === stone
-                ? win : lose;
-
-        document.body.innerHTML = `Вы выбрали: ${userChoose} <br> Компьютер выбрал: ${computerChoose} <br> Результат: ${result}`;
+        
+        game();
     </script>
 </body>
+
 </html>
