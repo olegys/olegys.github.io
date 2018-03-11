@@ -15,9 +15,9 @@
             const scissors = 'ножницы';
             const paper = 'бумага';
             const standoff = 'Ничья';
-            const win = 'Ты выиграл';
-            const lose = 'Ты проиграл';
-            const tryAgain = 'Попробуй еще раз';
+            const win = 'Вы выиграли';
+            const lose = 'Вы проиграли';
+            const tryAgain = `Ошибка, попробуйте ввести ${stone}, ${scissors} или ${paper}`;
 
             const userChoose = prompt(`Введите ${stone}, ${scissors} или ${paper}`, `${stone}`).toLowerCase();
 
@@ -37,7 +37,7 @@
 
             document.body.innerHTML = `Вы выбрали: ${userChoose} <br> Компьютер выбрал: ${computerChoose} <br> Результат: ${result}`;
         }
-        
+
         game();
     </script>
 </body>
